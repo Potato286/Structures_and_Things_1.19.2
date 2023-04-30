@@ -1,0 +1,21 @@
+{
+  "item.things.scythe": "Scythe",
+  "item.things.pickaxe": "Pickaxe",
+  "item.things.axe": "Axe",
+
+  "item.things.tlaloc_spawn_egg": "Tlaloc Spawn Egg",
+  "item.things.stronkzombie_spawn_egg": "Stronk Zombie Spawn Egg",
+
+  "block.things.computer": "Computer",
+
+  "block.things.bones_block": "Block of Bone",
+  "block.things.lily": "Lily",
+  "block.things.potted_lily": "Potted Lily",
+
+  "itemGroup.thingtab": "Thing",
+
+  "enchantment.things.wingardium_leviosa": "Wingardium Leviosa",
+
+  "entity.things.tlaloc": "Tlaloc",
+  "entity.things.stronkzombie": "Stronk Zombie"
+}

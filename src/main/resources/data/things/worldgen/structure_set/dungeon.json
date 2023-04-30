@@ -1,0 +1,20 @@
+{
+  "structures": [
+    {
+      "structure": "things:dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 5464623448,
+
+
+    "spacing": 30,
+
+
+    "separation": 15,
+
+    "type": "minecraft:random_spread"
+  }
+}
