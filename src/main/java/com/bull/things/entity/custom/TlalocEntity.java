@@ -55,7 +55,7 @@ public class TlalocEntity extends Monster implements IAnimatable {
     }
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 100.0D)
+                .add(Attributes.MAX_HEALTH, 200.0D)
                 .add(Attributes.ATTACK_DAMAGE, 8.0f)
                 .add(Attributes.ATTACK_SPEED, 4.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f)

@@ -2,6 +2,7 @@ package com.bull.things.item;
 
 import com.bull.things.Things;
 import com.bull.things.entity.ModEntityTypes;
+import com.bull.things.item.custom.Trident;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,7 +16,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> SCYTHE = ITEMS.register("scythe",
-            () -> new HoeItem(ModToolTiers.RHODIUM, 5, -2.4f,
+            () -> new HoeItem(ModToolTiers.RHODIUM, 9, -2.4f,
                     new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> TLALOC_SPAWN_EGG = ITEMS.register("tlaloc_spawn_egg",
@@ -33,6 +34,10 @@ public class ModItems {
     public static final RegistryObject<Item> AXE = ITEMS.register("axe",
             () -> new AxeItem(ModToolTiers.RHODIUM,5, -2.8f,
                     new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.THING_TAB)));
+
+    public static final RegistryObject<Item> TRIDENT = ITEMS.register("trident",
+            () -> new Trident(new Item.Properties().stacksTo(1).durability(2531).tab(ModCreativeModeTab.THING_TAB)));
+
 
 
 

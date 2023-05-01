@@ -55,12 +55,12 @@ public class StronkZombieEntity extends Monster implements IAnimatable {
     }
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 400.0D)
+                .add(Attributes.MAX_HEALTH, 300.0D)
                 .add(Attributes.ATTACK_DAMAGE, 12.0f)
-                .add(Attributes.ATTACK_SPEED, 0.4f)
+                .add(Attributes.ATTACK_SPEED, 0.3f)
                 .add(Attributes.MOVEMENT_SPEED, 0.2f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.8f)
-                .add(Attributes.ATTACK_KNOCKBACK, 12.0f).build();
+                .add(Attributes.ATTACK_KNOCKBACK, 6.0f).build();
     }
     @Override
     protected void registerGoals() {

@@ -15,7 +15,7 @@ public class ModEnchantments {
 
     public static RegistryObject<Enchantment> WINGARDIUM_LEVIOSA =
             ENCHANTMENTS.register("wingardium_leviosa", () -> new WingardiumLeviosaEnchantment(
-                    Enchantment.Rarity.UNCOMMON, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
+                    Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);
