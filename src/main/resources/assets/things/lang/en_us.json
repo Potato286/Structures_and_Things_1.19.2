@@ -6,6 +6,7 @@
 
   "item.things.tlaloc_spawn_egg": "Tlaloc Spawn Egg",
   "item.things.stronkzombie_spawn_egg": "Stronk Zombie Spawn Egg",
+  "item.things.pharoah_spawn_egg": "Pharaoh Spawn Egg",
 
   "block.things.computer": "Computer",
 
@@ -18,5 +19,6 @@
   "enchantment.things.wingardium_leviosa": "Wingardium Leviosa",
 
   "entity.things.tlaloc": "Tlaloc",
-  "entity.things.stronkzombie": "Stronk Zombie"
+  "entity.things.stronkzombie": "Stronk Zombie",
+  "entity.things.pharoah": "Pharaoh"
 }

@@ -20,11 +20,15 @@ public class ModItems {
                     new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> TLALOC_SPAWN_EGG = ITEMS.register("tlaloc_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.TLALOC, 0x22b341, 0x19732e,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.TLALOC, 0x00FF00, 0x32CBF1,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> STRONKZOMBIE_SPAWN_EGG = ITEMS.register("stronkzombie_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.STRONKZOMBIE, 0x22b365, 0x19726e,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.STRONKZOMBIE, 0x00D100, 0x00A300,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+
+    public static final RegistryObject<Item> PHAROAH_SPAWN_EGG = ITEMS.register("pharoah_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.PHAROAH, 0xf9cb9c, 0xf6b26b,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> PICKAXE = ITEMS.register("pickaxe",

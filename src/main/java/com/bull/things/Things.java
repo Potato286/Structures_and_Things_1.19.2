@@ -3,6 +3,7 @@ package com.bull.things;
 import com.bull.things.block.ModBlocks;
 import com.bull.things.enchantment.ModEnchantments;
 import com.bull.things.entity.ModEntityTypes;
+import com.bull.things.entity.client.PharoahRenderer;
 import com.bull.things.entity.client.StronkZombieRenderer;
 import com.bull.things.entity.client.TlalocRenderer;
 import com.bull.things.item.ModItems;
@@ -63,6 +64,7 @@ public class Things {
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntityTypes.TLALOC.get(), TlalocRenderer::new);
             EntityRenderers.register(ModEntityTypes.STRONKZOMBIE.get(), StronkZombieRenderer::new);
+            EntityRenderers.register(ModEntityTypes.PHAROAH.get(), PharoahRenderer::new);
         }
     }
 }

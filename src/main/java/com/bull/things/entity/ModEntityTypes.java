@@ -1,6 +1,7 @@
 package com.bull.things.entity;
 
 import com.bull.things.Things;
+import com.bull.things.entity.custom.PharoahEntity;
 import com.bull.things.entity.custom.StronkZombieEntity;
 import com.bull.things.entity.custom.TlalocEntity;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +23,10 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<StronkZombieEntity>> STRONKZOMBIE = ENTITY_TYPES.register("stronkzombie", () ->
             EntityType.Builder.of(StronkZombieEntity::new, MobCategory.MONSTER).sized(2.0f, 3.9f)
                     .build(new ResourceLocation(Things.MOD_ID, "stronkzombie").toString()));
+
+    public static final RegistryObject<EntityType<PharoahEntity>> PHAROAH = ENTITY_TYPES.register("pharoah", () ->
+            EntityType.Builder.of(PharoahEntity::new, MobCategory.MONSTER).sized(1.0f, 2.0f)
+                    .build(new ResourceLocation(Things.MOD_ID, "pharoah").toString()));
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }
