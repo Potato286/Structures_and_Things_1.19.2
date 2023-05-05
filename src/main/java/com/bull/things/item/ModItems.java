@@ -3,6 +3,8 @@ package com.bull.things.item;
 import com.bull.things.Things;
 import com.bull.things.entity.ModEntityTypes;
 import com.bull.things.item.custom.Trident;
+import com.bull.things.sound.ModSounds;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,7 +44,45 @@ public class ModItems {
     public static final RegistryObject<Item> TRIDENT = ITEMS.register("trident",
             () -> new Trident(new Item.Properties().stacksTo(1).durability(2531).tab(ModCreativeModeTab.THING_TAB)));
 
+    public static final RegistryObject<Item> DIE_MUSIC_DISC = ITEMS.register("die_music_disc",
+            () -> new RecordItem(4, ModSounds.DIE,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB).stacksTo(1), 3140));
 
+    public static final RegistryObject<Item> DIE_MUSIC_DISC_2 = ITEMS.register("die_music_disc_2",
+            () -> new RecordItem(4, ModSounds.DIE_2,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB).stacksTo(1), 3000));
+
+    public static final RegistryObject<Item> LAPIS_HELMET = ITEMS.register("lapis_helmet",
+            () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_LEGGING = ITEMS.register("lapis_leggings",
+            () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots",
+            () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+
+    public static final RegistryObject<Item> LAPIS_SWORD = ITEMS.register("lapis_sword",
+            () -> new SwordItem(ModToolTiers.LAPIS, 2, -1.9f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_PICKAXE = ITEMS.register("lapis_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.LAPIS, 1, -2.8f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_SHOVEL = ITEMS.register("lapis_shovel",
+            () -> new ShovelItem(ModToolTiers.LAPIS, 1, -2.5f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_AXE = ITEMS.register("lapis_axe",
+            () -> new AxeItem(ModToolTiers.LAPIS, 5, -2.5f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> LAPIS_HOE = ITEMS.register("lapis_hoe",
+            () -> new HoeItem(ModToolTiers.LAPIS, 0, -3f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> TEST_HOE = ITEMS.register("test_hoe",
+            () -> new PickaxeItem(ModToolTiers.TEST, -500, 300000f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
 
     public static void register(IEventBus eventBus){

@@ -1,0 +1,18 @@
+{
+  "die": {
+    "sounds": [
+      {
+        "name": "things:die",
+        "stream": true
+      }
+    ]
+  },
+  "die_2": {
+    "sounds": [
+      {
+        "name": "things:die_2",
+        "stream": true
+      }
+    ]
+  }
+}

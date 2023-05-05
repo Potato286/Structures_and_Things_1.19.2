@@ -8,6 +8,7 @@ import com.bull.things.entity.client.StronkZombieRenderer;
 import com.bull.things.entity.client.TlalocRenderer;
 import com.bull.things.item.ModItems;
 import com.bull.things.painting.ModPaintings;
+import com.bull.things.sound.ModSounds;
 import com.bull.things.world.feature.ModConfiguredFeatures;
 import com.bull.things.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
@@ -46,6 +47,7 @@ public class Things {
         ModPaintings.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

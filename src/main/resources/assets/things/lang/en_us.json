@@ -1,4 +1,9 @@
 {
+  "item.things.die_music_disc": "I Expect You to Die",
+  "item.things.die_music_disc_2": "I Expect You to Die 2",
+  "item.things.die_music_disc.desc": "Shell Games - I Expect You to Die",
+  "item.things.die_music_disc_2.desc": "Shell Games - I Expect You to Die 2",
+
   "item.things.scythe": "Scythe",
   "item.things.pickaxe": "Pickaxe",
   "item.things.axe": "Axe",
@@ -8,11 +13,25 @@
   "item.things.stronkzombie_spawn_egg": "Stronk Zombie Spawn Egg",
   "item.things.pharoah_spawn_egg": "Pharaoh Spawn Egg",
 
+  "item.things.lapis_helmet": "Lapis Helmet",
+  "item.things.lapis_chestplate": "Lapis Chestplate",
+  "item.things.lapis_leggings": "Lapis Leggings",
+  "item.things.lapis_boots": "Lapis Boots",
+  "item.things.lapis_pickaxe": "Lapis Pickaxe",
+  "item.things.lapis_axe": "Lapis Axe",
+  "item.things.lapis_shovel": "Lapis Shovel",
+  "item.things.lapis_hoe": "Lapis Hoe",
+  "item.things.lapis_sword": "Lapis Sword",
+
   "block.things.computer": "Computer",
 
   "block.things.bones_block": "Block of Bone",
   "block.things.lily": "Lily",
   "block.things.potted_lily": "Potted Lily",
+
+  "block.things.cracked_stone_brick_slab": "Cracked Stone Brick Slab",
+  "block.things.cracked_stone_brick_stairs": "Cracked Stone Brick Stairs",
+  "block.things.cracked_stone_brick_wall": "Cracked Stone Brick Wall",
 
   "itemGroup.thingtab": "Thing",
 
