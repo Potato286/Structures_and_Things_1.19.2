@@ -1,0 +1,87 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "dr_hakim",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "dr_hakim",
+					"pivot": [0, 1, 0],
+					"cubes": [
+						{"origin": [-4, 6, -1], "size": [8, 12, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "dr_hakim",
+					"pivot": [3.88701, 14.53825, 0.75]
+				},
+				{
+					"name": "upper_left_arm",
+					"parent": "left_arm",
+					"pivot": [5.88701, 13.53825, 0],
+					"cubes": [
+						{"origin": [2.88701, 12.53825, 0.25], "size": [6, 2, 0], "pivot": [5.88701, 13.53825, 0], "rotation": [0.8881, 12.46126, 32.61606], "uv": [12, 16]}
+					]
+				},
+				{
+					"name": "lower_left_arm",
+					"parent": "left_arm",
+					"pivot": [5.88701, 13.53825, 0],
+					"cubes": [
+						{"origin": [7.32053, 9.5604, -2.11571], "size": [6, 2, 0], "pivot": [10.32053, 10.5604, -2.11571], "rotation": [-1.17789, 38.87866, 32.6594], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "dr_hakim",
+					"pivot": [-4.06593, 14.82145, 0.1749]
+				},
+				{
+					"name": "upper_right_arm",
+					"parent": "right_arm",
+					"pivot": [-4.81593, 16.82145, 2.1749],
+					"cubes": [
+						{"origin": [-10.31593, 13.82145, 0.1749], "size": [6, 2, 0], "pivot": [-4.81593, 16.82145, 2.1749], "rotation": [0.8881, -12.4613, -32.6161], "uv": [12, 14]}
+					]
+				},
+				{
+					"name": "lower_right_arm",
+					"parent": "right_arm",
+					"pivot": [-4.81593, 16.82145, 2.1749],
+					"cubes": [
+						{"origin": [-13.25936, 9.91791, -3.06978], "size": [6, 2, 0], "pivot": [-10.25936, 10.91791, -2.06978], "rotation": [1.13134, -39.95725, -33.15107], "uv": [0, 14]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "dr_hakim",
+					"pivot": [3, 6, 0],
+					"cubes": [
+						{"origin": [-4, 0, 0], "size": [2, 6, 0], "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "dr_hakim",
+					"pivot": [-3, 6, 0],
+					"cubes": [
+						{"origin": [2, 0, 0], "size": [2, 6, 0], "uv": [4, 18]}
+					]
+				}
+			]
+		}
+	]
+}

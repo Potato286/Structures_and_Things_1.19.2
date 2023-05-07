@@ -3,6 +3,7 @@ package com.bull.things;
 import com.bull.things.block.ModBlocks;
 import com.bull.things.enchantment.ModEnchantments;
 import com.bull.things.entity.ModEntityTypes;
+import com.bull.things.entity.client.DrHakimRenderer;
 import com.bull.things.entity.client.PharoahRenderer;
 import com.bull.things.entity.client.StronkZombieRenderer;
 import com.bull.things.entity.client.TlalocRenderer;
@@ -67,6 +68,7 @@ public class Things {
             EntityRenderers.register(ModEntityTypes.TLALOC.get(), TlalocRenderer::new);
             EntityRenderers.register(ModEntityTypes.STRONKZOMBIE.get(), StronkZombieRenderer::new);
             EntityRenderers.register(ModEntityTypes.PHAROAH.get(), PharoahRenderer::new);
+            EntityRenderers.register(ModEntityTypes.DR_HAKIM.get(), DrHakimRenderer::new);
         }
     }
 }

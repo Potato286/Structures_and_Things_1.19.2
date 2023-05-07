@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "item": "minecraft:golden_sword"
+  },
+  "result": {
+    "item": "things:reinforced_gold_sword"
+  }
+}

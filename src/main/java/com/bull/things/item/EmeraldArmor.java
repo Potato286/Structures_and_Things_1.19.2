@@ -11,9 +11,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModArmorMaterials implements ArmorMaterial {
-    LAPIS("lapis", 10, new int[]{1, 3, 5, 2}, 25, SoundEvents.ARMOR_EQUIP_GOLD,
-            0.0F, 0.0F, () -> Ingredient.of(Items.LAPIS_LAZULI));
+public enum EmeraldArmor implements ArmorMaterial {
+    EMERALD("emerald", 28, new int[]{3, 6, 8, 3}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            0.0F, 0.0F, () -> Ingredient.of(Items.EMERALD));
+
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
@@ -25,8 +26,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    ModArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_,
-                      SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
+    EmeraldArmor(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_,
+                 SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
         this.name = p_40474_;
         this.durabilityMultiplier = p_40475_;
         this.slotProtections = p_40476_;

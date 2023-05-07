@@ -12,6 +12,7 @@
   "item.things.tlaloc_spawn_egg": "Tlaloc Spawn Egg",
   "item.things.stronkzombie_spawn_egg": "Stronk Zombie Spawn Egg",
   "item.things.pharoah_spawn_egg": "Pharaoh Spawn Egg",
+  "item.things.dr_hakim_spawn_egg": "Dr. Hakim Spawn Egg",
 
   "item.things.lapis_helmet": "Lapis Helmet",
   "item.things.lapis_chestplate": "Lapis Chestplate",
@@ -22,6 +23,46 @@
   "item.things.lapis_shovel": "Lapis Shovel",
   "item.things.lapis_hoe": "Lapis Hoe",
   "item.things.lapis_sword": "Lapis Sword",
+
+  "item.things.redstone_helmet": "Redstone Helmet",
+  "item.things.redstone_chestplate": "Redstone Chestplate",
+  "item.things.redstone_leggings": "Redstone Leggings",
+  "item.things.redstone_boots": "Redstone Boots",
+  "item.things.redstone_pickaxe": "Redstone Pickaxe",
+  "item.things.redstone_axe": "Redstone Axe",
+  "item.things.redstone_shovel": "Redstone Shovel",
+  "item.things.redstone_hoe": "Redstone Hoe",
+  "item.things.redstone_sword": "Redstone Sword",
+
+  "item.things.emerald_helmet": "Emerald Helmet",
+  "item.things.emerald_chestplate": "Emerald Chestplate",
+  "item.things.emerald_leggings": "Emerald Leggings",
+  "item.things.emerald_boots": "Emerald Boots",
+  "item.things.emerald_pickaxe": "Emerald Pickaxe",
+  "item.things.emerald_axe": "Emerald Axe",
+  "item.things.emerald_shovel": "Emerald Shovel",
+  "item.things.emerald_hoe": "Emerald Hoe",
+  "item.things.emerald_sword": "Emerald Sword",
+
+  "item.things.copper_helmet": "Copper Helmet",
+  "item.things.copper_chestplate": "Copper Chestplate",
+  "item.things.copper_leggings": "Copper Leggings",
+  "item.things.copper_boots": "Copper Boots",
+  "item.things.copper_pickaxe": "Copper Pickaxe",
+  "item.things.copper_axe": "Copper Axe",
+  "item.things.copper_shovel": "Copper Shovel",
+  "item.things.copper_hoe": "Copper Hoe",
+  "item.things.copper_sword": "Copper Sword",
+
+  "item.things.reinforced_gold_helmet": "Reinforced Gold Helmet",
+  "item.things.reinforced_gold_chestplate": "Reinforced Gold Chestplate",
+  "item.things.reinforced_gold_leggings": "Reinforced Gold Leggings",
+  "item.things.reinforced_gold_boots": "Reinforced Gold Boots",
+  "item.things.reinforced_gold_pickaxe": "Reinforced Gold Pickaxe",
+  "item.things.reinforced_gold_axe": "Reinforced Gold Axe",
+  "item.things.reinforced_gold_shovel": "Reinforced Gold Shovel",
+  "item.things.reinforced_gold_hoe": "Reinforced Gold Hoe",
+  "item.things.reinforced_gold_sword": "Reinforced Gold Sword",
 
   "block.things.computer": "Computer",
 
@@ -39,5 +80,6 @@
 
   "entity.things.tlaloc": "Tlaloc",
   "entity.things.stronkzombie": "Stronk Zombie",
-  "entity.things.pharoah": "Pharaoh"
+  "entity.things.pharoah": "Pharaoh",
+  "entity.things.dr_hakim": "Dr. Hakim"
 }

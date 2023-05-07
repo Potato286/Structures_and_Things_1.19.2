@@ -2,6 +2,7 @@ package com.bull.things.event;
 
 import com.bull.things.Things;
 import com.bull.things.entity.ModEntityTypes;
+import com.bull.things.entity.custom.DrHakimEntity;
 import com.bull.things.entity.custom.PharoahEntity;
 import com.bull.things.entity.custom.StronkZombieEntity;
 import com.bull.things.entity.custom.TlalocEntity;
@@ -19,6 +20,7 @@ public class ModEvents {
             event.put(ModEntityTypes.TLALOC.get(), TlalocEntity.setAttributes());
             event.put(ModEntityTypes.STRONKZOMBIE.get(), StronkZombieEntity.setAttributes());
             event.put(ModEntityTypes.PHAROAH.get(), PharoahEntity.setAttributes());
+            event.put(ModEntityTypes.DR_HAKIM.get(), DrHakimEntity.setAttributes());
         }
     }
 

@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "things:computer",
-    "things:bones_block"
+    "things:bones_block",
+    "things:cracked_stone_brick_slab",
+    "things:cracked_stone_brick_stairs",
+    "things:cracked_stone_brick_wall"
   ]
 }
