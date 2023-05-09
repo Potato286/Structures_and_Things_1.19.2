@@ -34,7 +34,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> DR_HAKIM_SPAWN_EGG = ITEMS.register("dr_hakim_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.DR_HAKIM, 0xcf3419, 0xFFFF00,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.DR_HAKIM, 0x8b0000, 0xF51720,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> PICKAXE = ITEMS.register("pickaxe",
@@ -188,19 +188,19 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
     public static final RegistryObject<Item> REINFORCED_GOLD_SWORD = ITEMS.register("reinforced_gold_sword",
-            () -> new SwordItem(ModToolTiers.REINFORCED_GOLD, 2, -1.9f,
+            () -> new SwordItem(ModToolTiers.REINFORCED_GOLD, 3, -2.4f,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
     public static final RegistryObject<Item> REINFORCED_GOLD_PICKAXE = ITEMS.register("reinforced_gold_pickaxe",
             () -> new PickaxeItem(ModToolTiers.REINFORCED_GOLD, 1, -2.8f,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
     public static final RegistryObject<Item> REINFORCED_GOLD_SHOVEL = ITEMS.register("reinforced_gold_shovel",
-            () -> new ShovelItem(ModToolTiers.REINFORCED_GOLD, 1, -2.5f,
+            () -> new ShovelItem(ModToolTiers.REINFORCED_GOLD, 1, -3.0f,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
     public static final RegistryObject<Item> REINFORCED_GOLD_AXE = ITEMS.register("reinforced_gold_axe",
-            () -> new AxeItem(ModToolTiers.REINFORCED_GOLD, 5, -2.5f,
+            () -> new AxeItem(ModToolTiers.REINFORCED_GOLD, 6, -3.1f,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
     public static final RegistryObject<Item> REINFORCED_GOLD_HOE = ITEMS.register("reinforced_gold_hoe",
-            () -> new HoeItem(ModToolTiers.REINFORCED_GOLD, 0, -3f,
+            () -> new HoeItem(ModToolTiers.REINFORCED_GOLD, -2, -1f,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
 

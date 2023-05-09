@@ -81,5 +81,9 @@
   "entity.things.tlaloc": "Tlaloc",
   "entity.things.stronkzombie": "Stronk Zombie",
   "entity.things.pharoah": "Pharaoh",
-  "entity.things.dr_hakim": "Dr. Hakim"
+  "entity.things.dr_hakim": "Dr. Hakim",
+
+  "sounds.things.dr_hakim_ambient": "Dr. Hakim Ambient Sound",
+  "sounds.things.dr_hakim_die": "Dr. Hakim Die Sound",
+  "sounds.things.dr_hakim_hurt": "Dr. Hakim Hurt Sound"
 }

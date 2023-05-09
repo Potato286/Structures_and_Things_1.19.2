@@ -14,5 +14,23 @@
         "stream": true
       }
     ]
+  },
+  "dr_hakim_ambient": {
+    "subtitle": "things.dr_hakim_ambient",
+    "sounds": [
+      "things:dr_hakim_ambient"
+    ]
+  },
+  "dr_hakim_hurt": {
+    "subtitle": "things.dr_hakim_hurt",
+    "sounds": [
+      "things:dr_hakim_hurt"
+    ]
+  },
+  "dr_hakim_die": {
+    "subtitle": "things.dr_hakim_die",
+    "sounds": [
+      "things:dr_hakim_die"
+    ]
   }
 }

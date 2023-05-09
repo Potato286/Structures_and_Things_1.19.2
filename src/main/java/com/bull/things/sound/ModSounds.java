@@ -14,6 +14,10 @@ public class ModSounds {
 
     public static RegistryObject<SoundEvent> DIE = registerSoundEvent("die");
     public static RegistryObject<SoundEvent> DIE_2 = registerSoundEvent("die_2");
+
+    public static RegistryObject<SoundEvent> DR_HAKIM_AMBIENT = registerSoundEvent("dr_hakim_ambient");
+    public static RegistryObject<SoundEvent> DR_HAKIM_DIE = registerSoundEvent("dr_hakim_die");
+    public static RegistryObject<SoundEvent> DR_HAKIM_HURT = registerSoundEvent("dr_hakim_hurt");
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(Things.MOD_ID, name)));
     }

@@ -1,5 +1,6 @@
 package com.bull.things.entity.custom;
 
+import com.bull.things.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -45,7 +46,7 @@ import software.bernie.geckolib3.util.GeckoLibUtil;
 import java.util.EnumSet;
 
 public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, RangedAttackMob {
-    private int explosionPower = 2;
+    private int explosionPower = 1;
     private static final EntityDataAccessor<Boolean> DATA_IS_CHARGING = SynchedEntityData.defineId(DrHakimEntity.class, EntityDataSerializers.BOOLEAN);
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
     public DrHakimEntity(EntityType<? extends FlyingMob> pEntityType, Level pLevel) {
@@ -119,15 +120,15 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.PILLAGER_AMBIENT;
+        return ModSounds.DR_HAKIM_AMBIENT.get();
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.ZOMBIE_VILLAGER_HURT;
+        return ModSounds.DR_HAKIM_HURT.get();
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.DOLPHIN_DEATH;
+        return ModSounds.DR_HAKIM_DIE.get();
     }
 
     protected float getSoundVolume() {
