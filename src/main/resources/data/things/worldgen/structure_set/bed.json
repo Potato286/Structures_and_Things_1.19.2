@@ -1,13 +1,13 @@
 {
   "structures": [
     {
-      "structure": "things:desert_pyramid",
+      "structure": "things:bed",
       "weight": 1
     }
   ],
   "placement": {
 
-    "salt": 1642136982,
+    "salt": 1642321891,
 
 
     "spacing": 40,
