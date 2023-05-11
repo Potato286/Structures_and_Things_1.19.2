@@ -1,6 +1,7 @@
 package com.bull.things;
 
 import com.bull.things.block.ModBlocks;
+import com.bull.things.effect.ModEffects;
 import com.bull.things.enchantment.ModEnchantments;
 import com.bull.things.entity.ModEntityTypes;
 import com.bull.things.entity.client.DrHakimRenderer;
@@ -49,6 +50,7 @@ public class Things {
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

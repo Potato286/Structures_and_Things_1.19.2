@@ -85,5 +85,7 @@
 
   "sounds.things.dr_hakim_ambient": "Dr. Hakim Ambient Sound",
   "sounds.things.dr_hakim_die": "Dr. Hakim Die Sound",
-  "sounds.things.dr_hakim_hurt": "Dr. Hakim Hurt Sound"
+  "sounds.things.dr_hakim_hurt": "Dr. Hakim Hurt Sound",
+
+  "effect.things.freeze": "Freeze"
 }
