@@ -17,6 +17,12 @@ public class ModEnchantments {
             ENCHANTMENTS.register("wingardium_leviosa", () -> new WingardiumLeviosaEnchantment(
                     Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
 
+    /*public static RegistryObject<Enchantment> EXPERIENCE_BOOST =
+            ENCHANTMENTS.register("experience", () -> new ExperienceEnchantment(
+                    Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
+
+     */
+
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);
     }

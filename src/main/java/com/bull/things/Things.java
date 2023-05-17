@@ -4,10 +4,7 @@ import com.bull.things.block.ModBlocks;
 import com.bull.things.effect.ModEffects;
 import com.bull.things.enchantment.ModEnchantments;
 import com.bull.things.entity.ModEntityTypes;
-import com.bull.things.entity.client.DrHakimRenderer;
-import com.bull.things.entity.client.PharoahRenderer;
-import com.bull.things.entity.client.StronkZombieRenderer;
-import com.bull.things.entity.client.TlalocRenderer;
+import com.bull.things.entity.client.*;
 import com.bull.things.item.ModItems;
 import com.bull.things.painting.ModPaintings;
 import com.bull.things.sound.ModSounds;
@@ -61,6 +58,7 @@ public class Things {
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LILY.getId(), ModBlocks.POTTED_LILY);
         });
+
     }
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -71,6 +69,7 @@ public class Things {
             EntityRenderers.register(ModEntityTypes.STRONKZOMBIE.get(), StronkZombieRenderer::new);
             EntityRenderers.register(ModEntityTypes.PHAROAH.get(), PharoahRenderer::new);
             EntityRenderers.register(ModEntityTypes.DR_HAKIM.get(), DrHakimRenderer::new);
+            EntityRenderers.register(ModEntityTypes.ETHAN_BOSS.get(), EthanBossRenderer::new);
         }
     }
 }

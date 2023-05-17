@@ -15,10 +15,7 @@ public class WingardiumLeviosaEnchantment extends Enchantment {
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
         if(!pAttacker.level.isClientSide()) {
-            ServerLevel world = (ServerLevel)pAttacker.level;
-            ServerPlayer player = ((ServerPlayer) pAttacker);
             Entity entity = pTarget;
-            LivingEntity entity1 = pAttacker;
             if(pLevel == 1){
                 entity.setPos(entity.getX(), entity.getY()+10, entity.getZ());
             }

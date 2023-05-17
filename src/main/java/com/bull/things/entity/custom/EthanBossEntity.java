@@ -7,7 +7,6 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -19,16 +18,15 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.item.PrimedTnt;
-import net.minecraft.world.entity.monster.*;
-import net.minecraft.world.entity.npc.AbstractVillager;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.LargeFireball;
 import net.minecraft.world.level.Level;
@@ -47,7 +45,7 @@ import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import java.util.EnumSet;
 
-public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, RangedAttackMob {
+public class EthanBossEntity extends FlyingMob implements IAnimatable, Enemy, RangedAttackMob {
     public void checkDespawn() {
         if (this.level.getDifficulty() == Difficulty.PEACEFUL && this.shouldDespawnInPeaceful()) {
             this.discard();
@@ -55,16 +53,15 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
             this.noActionTime = 0;
         }
     }
-
     private int explosionPower = 1;
-    private static final EntityDataAccessor<Boolean> DATA_IS_CHARGING = SynchedEntityData.defineId(DrHakimEntity.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Boolean> DATA_IS_CHARGING = SynchedEntityData.defineId(EthanBossEntity.class, EntityDataSerializers.BOOLEAN);
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
-    public DrHakimEntity(EntityType<? extends FlyingMob> pEntityType, Level pLevel) {
+    public EthanBossEntity(EntityType<? extends FlyingMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.moveControl = new DrHakimMoveControl(this);
         this.xpReward = 5000;
     }
-    private final ServerBossEvent bossInfo = new ServerBossEvent(Component.literal("Dr. Hakim"), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS);
+    private final ServerBossEvent bossInfo = new ServerBossEvent(Component.literal("Ethan"), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS);
     @Override
     public void startSeenByPlayer(ServerPlayer player) {
         super.startSeenByPlayer(player);
@@ -156,10 +153,10 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
     public void performRangedAttack(LivingEntity pTarget, float pVelocity) {
     }
     static class DrHakimShootFireballGoal extends Goal {
-        private final DrHakimEntity drHakimEntity;
+        private final EthanBossEntity drHakimEntity;
         public int chargeTime;
 
-        public DrHakimShootFireballGoal(DrHakimEntity drHakimEntity) {
+        public DrHakimShootFireballGoal(EthanBossEntity drHakimEntity) {
             this.drHakimEntity = drHakimEntity;
         }
 
@@ -213,9 +210,9 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
                             level.levelEvent((Player)null, 1016, this.drHakimEntity.blockPosition(), 0);
                         }
 
-                        LargeFireball largefireball = new LargeFireball(level, this.drHakimEntity, d2, d3, d4, this.drHakimEntity.getExplosionPower());
-                        largefireball.setPos(this.drHakimEntity.getX() + vec3.x * 1.0D, this.drHakimEntity.getY(0.5D) + 0.5D, largefireball.getZ() + vec3.z * 1.0D);
-                        level.addFreshEntity(largefireball);
+                        PrimedTnt tnt = new PrimedTnt(level, d2, d3, d4, this.drHakimEntity);
+                        tnt.setPos(this.drHakimEntity.getX() + vec3.x * 1.0D, this.drHakimEntity.getY(0.5D) + 0.5D, tnt.getZ() + vec3.z * 1.0D);
+                        level.addFreshEntity(tnt);
                         this.chargeTime = -5;
                     }
                 } else if (this.chargeTime > 0) {
@@ -241,16 +238,16 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
         this.entityData.define(DATA_IS_CHARGING, false);
     }
     static class DrHakimMoveControl extends MoveControl {
-        private final DrHakimEntity drHakimEntity;
+        private final EthanBossEntity drHakimEntity;
         private int floatDuration;
 
-        public DrHakimMoveControl(DrHakimEntity drHakimEntity) {
+        public DrHakimMoveControl(EthanBossEntity drHakimEntity) {
             super(drHakimEntity);
             this.drHakimEntity = drHakimEntity;
         }
 
         public void tick() {
-            if (this.operation == MoveControl.Operation.MOVE_TO) {
+            if (this.operation == Operation.MOVE_TO) {
                 if (this.floatDuration-- <= 0) {
                     this.floatDuration += this.drHakimEntity.getRandom().nextInt(5) + 2;
                     Vec3 vec3 = new Vec3(this.wantedX - this.drHakimEntity.getX(), this.wantedY - this.drHakimEntity.getY(), this.wantedZ - this.drHakimEntity.getZ());
@@ -259,7 +256,7 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
                     if (this.canReach(vec3, Mth.ceil(d0))) {
                         this.drHakimEntity.setDeltaMovement(this.drHakimEntity.getDeltaMovement().add(vec3.scale(0.1D)));
                     } else {
-                        this.operation = MoveControl.Operation.WAIT;
+                        this.operation = Operation.WAIT;
                     }
                 }
 
@@ -280,11 +277,11 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
         }
     }
     static class DrHakimLookGoal extends Goal {
-        private final DrHakimEntity drHakimEntity;
+        private final EthanBossEntity drHakimEntity;
 
-        public DrHakimLookGoal(DrHakimEntity drHakimEntity) {
+        public DrHakimLookGoal(EthanBossEntity drHakimEntity) {
             this.drHakimEntity = drHakimEntity;
-            this.setFlags(EnumSet.of(Goal.Flag.LOOK));
+            this.setFlags(EnumSet.of(Flag.LOOK));
         }
 
         /**
@@ -321,11 +318,11 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
         }
     }
     static class RandomFloatAroundGoal extends Goal {
-        private final DrHakimEntity drHakimEntity;
+        private final EthanBossEntity drHakimEntity;
 
-        public RandomFloatAroundGoal(DrHakimEntity drHakimEntity) {
+        public RandomFloatAroundGoal(EthanBossEntity drHakimEntity) {
             this.drHakimEntity = drHakimEntity;
-            this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+            this.setFlags(EnumSet.of(Flag.MOVE));
         }
 
         /**
@@ -385,6 +382,7 @@ public class DrHakimEntity extends FlyingMob implements IAnimatable, Enemy, Rang
             return this.isInvulnerableTo(pSource) ? false : super.hurt(pSource, pAmount);
         }
     }
+
     @Override
     protected boolean shouldDespawnInPeaceful() {
         return true;

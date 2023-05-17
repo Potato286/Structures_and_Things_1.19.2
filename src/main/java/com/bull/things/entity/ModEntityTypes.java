@@ -1,10 +1,7 @@
 package com.bull.things.entity;
 
 import com.bull.things.Things;
-import com.bull.things.entity.custom.DrHakimEntity;
-import com.bull.things.entity.custom.PharoahEntity;
-import com.bull.things.entity.custom.StronkZombieEntity;
-import com.bull.things.entity.custom.TlalocEntity;
+import com.bull.things.entity.custom.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -32,6 +29,11 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<DrHakimEntity>> DR_HAKIM = ENTITY_TYPES.register("dr_hakim", () ->
             EntityType.Builder.of(DrHakimEntity::new, MobCategory.MONSTER).sized(1.5f, 3.5f)
                     .build(new ResourceLocation(Things.MOD_ID, "dr_hakim").toString()));
+
+    public static final RegistryObject<EntityType<EthanBossEntity>> ETHAN_BOSS = ENTITY_TYPES.register("ethan_boss", () ->
+            EntityType.Builder.of(EthanBossEntity::new, MobCategory.MONSTER).sized(1.0f, 2.0f)
+                    .build(new ResourceLocation(Things.MOD_ID, "ethan_boss").toString()));
+
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }

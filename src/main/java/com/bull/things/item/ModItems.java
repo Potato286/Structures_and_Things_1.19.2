@@ -37,6 +37,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.DR_HAKIM, 0x8b0000, 0xF51720,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
+    public static final RegistryObject<Item> ETHAN_BOSS_SPAWN_EGG = ITEMS.register("ethan_boss_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ETHAN_BOSS, 0x8b0000, 0xF51720,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+
     public static final RegistryObject<Item> PICKAXE = ITEMS.register("pickaxe",
             () -> new PickaxeItem(ModToolTiers.RHODIUM,1, -2.8f,
                     new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.THING_TAB)));

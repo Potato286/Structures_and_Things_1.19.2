@@ -8,6 +8,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.BossEvent;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,9 +38,17 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
 public class StronkZombieEntity extends Monster implements IAnimatable {
+    public void checkDespawn() {
+        if (this.level.getDifficulty() == Difficulty.PEACEFUL && this.shouldDespawnInPeaceful()) {
+            this.discard();
+        } else {
+            this.noActionTime = 0;
+        }
+    }
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
     public StronkZombieEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.xpReward = 5000;
     }
     private final ServerBossEvent bossInfo = new ServerBossEvent(Component.literal("Stronk Zombie"), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS);
     @Override
@@ -58,7 +67,7 @@ public class StronkZombieEntity extends Monster implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 300.0D)
                 .add(Attributes.ATTACK_DAMAGE, 12.0f)
                 .add(Attributes.ATTACK_SPEED, 0.3f)
-                .add(Attributes.MOVEMENT_SPEED, 0.2f)
+                .add(Attributes.MOVEMENT_SPEED, 0.25f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.8f)
                 .add(Attributes.ATTACK_KNOCKBACK, 6.0f).build();
     }
@@ -70,9 +79,7 @@ public class StronkZombieEntity extends Monster implements IAnimatable {
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Creeper.class, true));
     }
 
     @Override
@@ -145,5 +152,9 @@ public class StronkZombieEntity extends Monster implements IAnimatable {
     public void tick() {
         super.tick();
         this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
+    }
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return true;
     }
 }

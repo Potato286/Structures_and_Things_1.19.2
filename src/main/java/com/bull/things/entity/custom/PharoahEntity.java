@@ -8,6 +8,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.BossEvent;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,9 +38,17 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
 public class PharoahEntity extends Monster implements IAnimatable {
+    public void checkDespawn() {
+        if (this.level.getDifficulty() == Difficulty.PEACEFUL && this.shouldDespawnInPeaceful()) {
+            this.discard();
+        } else {
+            this.noActionTime = 0;
+        }
+    }
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
     public PharoahEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.xpReward = 5000;
     }
     private final ServerBossEvent bossInfo = new ServerBossEvent(Component.literal("Pharaoh"), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS);
     @Override
@@ -145,5 +154,9 @@ public class PharoahEntity extends Monster implements IAnimatable {
     public void tick() {
         super.tick();
         this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
+    }
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return true;
     }
 }
