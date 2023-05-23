@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "things:pharoah": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "things:pharoah"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  }
+}

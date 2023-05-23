@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "things:computer"
+    "things:computer",
+    "things:cut_copper_wall",
+    "things:weathered_cut_copper_wall",
+    "things:exposed_cut_copper_wall",
+    "things:oxidized_cut_copper_wall"
   ]
 }

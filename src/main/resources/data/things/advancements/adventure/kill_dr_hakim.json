@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "things:dr_hakim": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "things:dr_hakim"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  }
+}

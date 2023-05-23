@@ -11,6 +11,8 @@ import com.bull.things.sound.ModSounds;
 import com.bull.things.world.feature.ModConfiguredFeatures;
 import com.bull.things.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;

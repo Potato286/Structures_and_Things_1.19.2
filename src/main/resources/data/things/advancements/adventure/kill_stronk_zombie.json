@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "things:stronk_zombie": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "things:stronk_zombie"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  }
+}
