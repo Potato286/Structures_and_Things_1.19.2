@@ -52,12 +52,14 @@ public class WanderingTrader {
         genericTrades.add(new ItemsForEmeraldsTrade(Items.SPORE_BLOSSOM, 1, 8, 10, 1));
 
         rareTrades.add(new ItemsForEmeraldsTrade(Blocks.MYCELIUM, 3, 3, 6, 1));
-        rareTrades.add(new ItemsForEmeraldsTrade(Blocks.SPONGE, 10, 1, 4, 2));
+        rareTrades.add(new ItemsForEmeraldsTrade(Blocks.SPONGE, 5, 4, 4, 2));
         rareTrades.add(new ItemsForEmeraldsTrade(Items.ENCHANTED_GOLDEN_APPLE, 64, 1, 1, 5));
-        rareTrades.add(new ItemsForEmeraldsTrade(Items.TURTLE_EGG, 6, 1, 4, 1));
+        rareTrades.add(new ItemsForEmeraldsTrade(Items.TURTLE_EGG, 3, 1, 4, 1));
         rareTrades.add(new ItemsForEmeraldsTrade(Items.TRIDENT, 16, 1, 1, 1));
         rareTrades.add(new ItemsForEmeraldsTrade(Items.WITHER_SKELETON_SKULL, 40, 1, 1, 1));
-        rareTrades.add(new ItemsForEmeraldsTrade(Items.AXOLOTL_BUCKET, 5, 1, 5, 1));
+        rareTrades.add(new ItemsForEmeraldsTrade(Items.AXOLOTL_BUCKET, 3, 1, 5, 1));
+        rareTrades.add(new ItemsForEmeraldsTrade(Items.TADPOLE_BUCKET, 3, 1, 5, 1));
+        rareTrades.add(new ItemsForEmeraldsTrade(Items.SCUTE, 5, 1, 5, 1));
         rareTrades.add(new ItemsForEmeraldsTrade(Items.ZOMBIE_HEAD, 30, 1, 1, 1));
         rareTrades.add(new ItemsForEmeraldsTrade(Items.CREEPER_HEAD, 30, 1, 1, 1));
         rareTrades.add(new ItemsForEmeraldsTrade(Items.SKELETON_SKULL, 30, 1, 1, 1));

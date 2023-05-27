@@ -4,6 +4,8 @@ import com.bull.things.Things;
 import com.bull.things.entity.ModEntityTypes;
 import com.bull.things.item.custom.Trident;
 import com.bull.things.sound.ModSounds;
+import net.minecraft.client.resources.sounds.Sound;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;

@@ -13,7 +13,7 @@
         "north": "low"
       },
       "apply": {
-        "model": "things:block/weathered_weathered_cut_copper_wall_side",
+        "model": "things:block/weathered_cut_copper_wall_side",
         "uvlock": true
       }
     },

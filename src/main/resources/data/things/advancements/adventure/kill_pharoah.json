@@ -1,5 +1,15 @@
 {
-  "parent": "minecraft:adventure/kill_a_mob",
+  "display": {
+    "icon": {
+      "item": "things:axe"
+    },
+    "title": "Mummy is dummy",
+    "description": "I got out of my tomb for this",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "things:adventure/kill_tlaloc",
   "criteria": {
     "things:pharoah": {
       "conditions": {

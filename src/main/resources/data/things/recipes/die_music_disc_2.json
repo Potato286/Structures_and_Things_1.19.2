@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:yellow_dye"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "#T#"
+  ],
+  "result": {
+    "count": 1,
+    "item": "things:die_music_disc_2"
+  }
+}
