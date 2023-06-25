@@ -80,21 +80,6 @@ public class TlalocEntity extends Monster implements IAnimatable {
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Creeper.class, true));
-    }
-
-    @Override
-    public boolean isWithinMeleeAttackRange(LivingEntity pEntity) {
-        if(!isWithinMeleeAttackRange(pEntity)){
-            ServerLevel world = ((ServerLevel) pEntity.level);
-            BlockPos pos = pEntity.blockPosition();
-
-            if(!pEntity.level.isClientSide()){
-                EntityType.LIGHTNING_BOLT.spawn(world, null, null, pos,
-                        MobSpawnType.TRIGGERED, true, true);
-            }
-        }
-        return super.isWithinMeleeAttackRange(pEntity);
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
@@ -158,4 +143,27 @@ public class TlalocEntity extends Monster implements IAnimatable {
     protected boolean shouldDespawnInPeaceful() {
         return true;
     }
+    /*static class TlalocSummonLightning extends Goal{
+        private final TlalocEntity tlalocEntity;
+        public int chargeTime;
+
+        public TlalocSummonLightning(TlalocEntity tlalocEntity){
+            this.tlalocEntity = tlalocEntity;
+        }
+        public boolean canUse() {
+            return this.tlalocEntity.getTarget() != null;
+        }
+        public void start() {
+            this.chargeTime = 0;
+        }
+        public void stop() {
+            this.tlalocEntity.setCharging(false);
+        }
+
+        public boolean requiresUpdateEveryTick() {
+            return true;
+        }
+    }
+
+     */
 }

@@ -64,7 +64,18 @@
   "item.things.reinforced_gold_hoe": "Reinforced Gold Hoe",
   "item.things.reinforced_gold_sword": "Reinforced Gold Sword",
 
+  "item.things.sculk_reinforced_netherite_helmet": "Sculk Reinforced Netherite Helmet",
+  "item.things.sculk_reinforced_netherite_chestplate": "Sculk Reinforced Netherite Chestplate",
+  "item.things.sculk_reinforced_netherite_leggings": "Sculk Reinforced Netherite Leggings",
+  "item.things.sculk_reinforced_netherite_boots": "Sculk Reinforced Netherite Boots",
+
+  "item.things.nether_star_reinforced_netherite_helmet": "Nether Star Reinforced Netherite Helmet",
+  "item.things.nether_star_reinforced_netherite_chestplate": "Nether Star Reinforced Netherite Chestplate",
+  "item.things.nether_star_reinforced_netherite_leggings": "Nether Star Reinforced Netherite Leggings",
+  "item.things.nether_star_reinforced_netherite_boots": "Nether Star Reinforced Netherite Boots",
+
   "block.things.computer": "Computer",
+  "block.things.nuke": "Nuke",
 
   "block.things.bones_block": "Block of Bone",
   "block.things.lily": "Lily",

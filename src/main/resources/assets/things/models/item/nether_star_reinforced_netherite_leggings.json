@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "things:item/nether_star_reinforced_netherite_leggings"
+  }
+}

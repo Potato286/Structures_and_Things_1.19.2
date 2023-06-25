@@ -72,6 +72,7 @@ public class Things {
             EntityRenderers.register(ModEntityTypes.PHAROAH.get(), PharoahRenderer::new);
             EntityRenderers.register(ModEntityTypes.DR_HAKIM.get(), DrHakimRenderer::new);
             EntityRenderers.register(ModEntityTypes.ETHAN_BOSS.get(), EthanBossRenderer::new);
+            //EntityRenderers.register(ModEntityTypes.NUKE.get(), NukeRenderer::new);
         }
     }
 }

@@ -2,6 +2,7 @@ package com.bull.things.block;
 
 import com.bull.things.Things;
 import com.bull.things.block.custom.ComputerBlock;
+import com.bull.things.block.custom.NukeBlock;
 import com.bull.things.item.ModCreativeModeTab;
 import com.bull.things.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
@@ -198,6 +199,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = registerBlock("black_concrete_stairs",
             () -> new StairBlock(() -> Blocks.BLACK_CONCRETE.defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.THING_TAB);
+
+    public static final RegistryObject<Block> NUKE = registerBlock("nuke",
+            () -> new NukeBlock(BlockBehaviour.Properties.of(Material.EXPLOSIVE).destroyTime(1).instabreak()
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.THING_TAB);
+
+
 
 
 

@@ -30,6 +30,7 @@ public class WanderingTrader {
         genericTrades.remove(6); //dandelion
         genericTrades.remove(6); //poppy
         genericTrades.remove(16); //wheat seeds
+
         for (int i = 0; i < 16; i++)
         {
             genericTrades.remove(25); //all dyes

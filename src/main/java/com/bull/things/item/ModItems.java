@@ -2,6 +2,7 @@ package com.bull.things.item;
 
 import com.bull.things.Things;
 import com.bull.things.entity.ModEntityTypes;
+import com.bull.things.item.custom.ModArmorItem;
 import com.bull.things.item.custom.Trident;
 import com.bull.things.sound.ModSounds;
 import net.minecraft.client.resources.sounds.Sound;
@@ -207,6 +208,31 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
     public static final RegistryObject<Item> REINFORCED_GOLD_HOE = ITEMS.register("reinforced_gold_hoe",
             () -> new HoeItem(ModToolTiers.REINFORCED_GOLD, -2, -1f,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+
+    public static final RegistryObject<Item> SCULK_REINFORCED_NETHERITE_HELMET = ITEMS.register("sculk_reinforced_netherite_helmet",
+            () -> new ArmorItem(SculkReinforcedNetheriteArmor.SCULK_REINFORCED_NETHERITE, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> SCULK_REINFORCED_NETHERITE_CHESTPLATE = ITEMS.register("sculk_reinforced_netherite_chestplate",
+            () -> new ArmorItem(SculkReinforcedNetheriteArmor.SCULK_REINFORCED_NETHERITE, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> SCULK_REINFORCED_NETHERITE_LEGGING = ITEMS.register("sculk_reinforced_netherite_leggings",
+            () -> new ArmorItem(SculkReinforcedNetheriteArmor.SCULK_REINFORCED_NETHERITE, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> SCULK_REINFORCED_NETHERITE_BOOTS = ITEMS.register("sculk_reinforced_netherite_boots",
+            () -> new ArmorItem(SculkReinforcedNetheriteArmor.SCULK_REINFORCED_NETHERITE, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> NETHER_STAR_REINFORCED_NETHERITE_HELMET = ITEMS.register("nether_star_reinforced_netherite_helmet",
+            () -> new ModArmorItem(NetherStarReinforcedNetheriteArmor.NETHER_STAR_REINFORCED_NETHERITE, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> NETHER_STAR_REINFORCED_NETHERITE_CHESTPLATE = ITEMS.register("nether_star_reinforced_netherite_chestplate",
+            () -> new ModArmorItem(NetherStarReinforcedNetheriteArmor.NETHER_STAR_REINFORCED_NETHERITE, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> NETHER_STAR_REINFORCED_NETHERITE_LEGGINGS = ITEMS.register("nether_star_reinforced_netherite_leggings",
+            () -> new ModArmorItem(NetherStarReinforcedNetheriteArmor.NETHER_STAR_REINFORCED_NETHERITE, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
+    public static final RegistryObject<Item> NETHER_STAR_REINFORCED_NETHERITE_BOOTS = ITEMS.register("nether_star_reinforced_netherite_boots",
+            () -> new ModArmorItem(NetherStarReinforcedNetheriteArmor.NETHER_STAR_REINFORCED_NETHERITE, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.THING_TAB)));
 
 

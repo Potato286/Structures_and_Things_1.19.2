@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "things:prismarine_brick"
+          "name": "things:prismarine_brick_wall"
         }
       ]
     }
